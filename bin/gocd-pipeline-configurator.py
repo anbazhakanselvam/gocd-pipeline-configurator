@@ -60,7 +60,7 @@ def createPipeline(pipeline):
     json_data = json.dumps(pipeline)
     print "Json Dump Data " + json_data
     headers = {'Accept': 'application/json', 'Content-Type': 'application/json'}
-     print "create_url: " + create_url
+    print "create_url " + str(create_url)
     response = requests.post(create_url, data=json_data, headers=headers)
     print "Error Code " + str(response.status_code)
     if not response.status_code == 200:
