@@ -16,18 +16,3 @@ pipelines:
         parameters:
           - name: BRANCH
             value: master
-  - group: hello-world
-    pipeline:
-        label_template: ${COUNT}
-        enable_pipeline_locking: false
-        name: hello-world-build-2
-        template: build
-        materials:
-          - type: git
-            attributes:
-              url: https://github.com/aruthiya/getting-started-repo.git
-              branch: master
-              auto_update: false
-        parameters:
-          - name: BRANCH
-            value: master
