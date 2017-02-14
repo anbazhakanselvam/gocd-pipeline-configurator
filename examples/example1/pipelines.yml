@@ -19,11 +19,4 @@ pipelines:
               branch: master
               submodule_folder: null
               shallow_clone: true
-        stages:
-          - name: defaultStage
-            fetch_materials: true
-            clean_working_directory: false
-            never_cleanup_artifacts: false
-            approval:
-              type: "success
-        
+ 
