@@ -28,3 +28,11 @@ pipelines:
           -
         jobs:
           - name: defaultJob
+            run_instance_count: null
+            timeout: 0
+            environment_variables:
+              -
+            resources:
+              -
+            tasks:
+              - type: exec
