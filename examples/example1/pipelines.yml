@@ -39,5 +39,7 @@ pipelines:
                     attributes:
                       run_if:
                         - passed
+                      command: ls
+                      working_directory: null
         
         
