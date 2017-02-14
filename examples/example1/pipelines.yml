@@ -23,3 +23,7 @@ pipelines:
           - name: defaultStage
             fetch_materials: true
             clean_working_directory: false
+            never_cleanup_artifacts: false
+        environment_variables:
+        jobs:
+          - name: defaultJob
