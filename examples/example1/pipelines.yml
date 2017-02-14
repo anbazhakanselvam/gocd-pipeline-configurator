@@ -24,7 +24,6 @@ pipelines:
             fetch_materials: true
             clean_working_directory: false
             never_cleanup_artifacts: false
-        environment_variables: -
         jobs:
           - name: defaultJob
             run_instance_count: null
@@ -35,3 +34,6 @@ pipelines:
               -
             tasks:
               - type: exec
+        environment_variables: 
+          -
+        
