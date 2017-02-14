@@ -49,7 +49,7 @@ def editPipeline(pipeline, etag):
        print "Error: Could not edit pipeline " + pipeline['pipeline']['name'] + ": " + response.text
 
 def createPipeline(pipeline):
-    create_url = options[BASE_URL_OPTION_NAME] + "/go/admin/pipelines"
+    create_url = options[BASE_URL_OPTION_NAME] + "/go/api/admin/pipelines"
     if 'pipeline_template' in pipeline:
         if not pipeline['pipeline_template'] in templates:
             print "Error: No such template '" + pipeline['pipeline_template']+ "'. Skipping " + pipeline['pipeline']['name']
