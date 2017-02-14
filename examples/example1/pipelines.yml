@@ -19,4 +19,5 @@ pipelines:
               branch: master
               submodule_folder: null
               shallow_clone: true
- 
+        stages:
+          - name: defaultStage
