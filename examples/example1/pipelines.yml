@@ -25,5 +25,6 @@ pipelines:
             clean_working_directory: false
             never_cleanup_artifacts: false
         environment_variables:
+          -
         jobs:
           - name: defaultJob
