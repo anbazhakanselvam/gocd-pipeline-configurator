@@ -11,14 +11,12 @@ pipelines:
           - type: git
             attributes:
               url: https://github.com/aruthiya/getting-started-repo.git
-              destination: dest
               filter: null
               invert_filter: false
               name: null
               auto_update: true
               branch: master
-              submodule_folder: null
-              shallow_clone: true
+              submodule_folder: null              
         stages:
           - name: defaultStage
             fetch_materials: true
