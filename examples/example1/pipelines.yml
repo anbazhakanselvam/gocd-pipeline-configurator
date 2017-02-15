@@ -5,12 +5,12 @@ pipelines:
     pipeline:
         label_template: ${COUNT}
         enable_pipeline_locking: false
-        name: hello-world-build-2
+        name: hello-world-build
         template: null
         materials:
           - type: git
             attributes:
-              url: https://github.com/anbazhakanselvam/getting-started-repo.git
+              url: https://github.com/gocd-contrib/getting-started-repo.git
               filter: null
               invert_filter: false
               name: null
@@ -18,14 +18,14 @@ pipelines:
               branch: master
               submodule_folder: null
         stages:
-          - name: defaultStage-1
+          - name: defaultStage
             fetch_materials: true
             clean_working_directory: false
             never_cleanup_artifacts: false
             environment_variables: 
               -
             jobs:
-              - name: defaultJob-1
+              - name: defaultJob
                 run_instance_count: null
                 timeout: 0
                 environment_variables:
