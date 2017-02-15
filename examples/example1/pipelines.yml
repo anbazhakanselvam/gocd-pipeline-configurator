@@ -15,10 +15,10 @@ pipelines:
               filter: null
               invert_filter: false
               name: null
-              auto_update: false
+              auto_update: true
               branch: master
               submodule_folder: null
-              shallow_clone: false
+              shallow_clone: true
         stages:
           - name: defaultStage
             fetch_materials: true
