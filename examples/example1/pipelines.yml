@@ -15,10 +15,10 @@ pipelines:
               filter: null
               invert_filter: false
               name: null
-              auto_update: true
+              auto_update: false
               branch: master
               submodule_folder: null
-              shallow_clone: true
+              shallow_clone: false
         stages:
           - name: defaultStage
             fetch_materials: true
@@ -39,7 +39,7 @@ pipelines:
                     attributes:
                       run_if:
                         - passed
-                      command: "./build"
+                      command: ./build
                       working_directory: null
         
         
