@@ -10,7 +10,7 @@ pipelines:
         materials:
           - type: git
             attributes:
-              url: https://github.com/aruthiya/getting-started-repo.git
+              url: https://github.com/anbazhakanselvam/getting-started-repo.git
               filter: null
               invert_filter: false
               name: null
