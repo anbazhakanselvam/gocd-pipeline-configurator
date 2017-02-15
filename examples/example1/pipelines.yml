@@ -37,7 +37,7 @@ pipelines:
                     attributes:
                       run_if:
                         - passed
-                      command: ./build
+                      command: python engci-jenkins.py
                       working_directory: null
         
         
