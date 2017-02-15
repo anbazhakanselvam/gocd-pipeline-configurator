@@ -5,7 +5,7 @@ pipelines:
     pipeline:
         label_template: ${COUNT}
         enable_pipeline_locking: false
-        name: hello-world-build
+        name: hello-world-build-2
         template: null
         materials:
           - type: git
