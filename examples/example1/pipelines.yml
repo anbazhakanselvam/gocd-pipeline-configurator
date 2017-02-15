@@ -35,7 +35,7 @@ pipelines:
                 resources:
                   -
                 tasks:
-                  - type: cmd
+                  - type: command
                     attributes:
                       run_if:
                         - passed
