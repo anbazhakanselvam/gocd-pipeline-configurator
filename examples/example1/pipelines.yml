@@ -5,7 +5,7 @@ pipelines:
     pipeline:
         label_template: ${COUNT}
         enable_pipeline_locking: false
-        name: hello-world-build-2
+        name: hello-world-build-3
         template: null
         materials:
           - type: git
@@ -18,14 +18,14 @@ pipelines:
               branch: master
               submodule_folder: null
         stages:
-          - name: defaultStage
+          - name: defaultStage-3
             fetch_materials: true
             clean_working_directory: false
             never_cleanup_artifacts: false
             environment_variables: 
               -
             jobs:
-              - name: defaultJob
+              - name: defaultJob-3
                 run_instance_count: null
                 timeout: 0
                 environment_variables:
