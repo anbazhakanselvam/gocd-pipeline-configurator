@@ -39,7 +39,7 @@ pipelines:
                     attributes:
                       run_if:
                         - passed
-                      command: ./build
+                      command:./build
                       working_directory: null
         
         
