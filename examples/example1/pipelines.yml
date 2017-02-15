@@ -5,27 +5,29 @@ pipelines:
     pipeline:
         label_template: ${COUNT}
         enable_pipeline_locking: false
-        name: hello-world-build-1
+        name: hello-world-build-2
         template: null
         materials:
           - type: git
             attributes:
               url: https://github.com/anbazhakanselvam/getting-started-repo.git
+              destination: dest
               filter: null
               invert_filter: false
               name: null
               auto_update: true
               branch: master
-              submodule_folder: null              
+              submodule_folder: null
+              shallow_clone: true
         stages:
-          - name: defaultStage
+          - name: defaultStage-1
             fetch_materials: true
             clean_working_directory: false
             never_cleanup_artifacts: false
             environment_variables: 
               -
             jobs:
-              - name: defaultJob
+              - name: defaultJob-1
                 run_instance_count: null
                 timeout: 0
                 environment_variables:
