@@ -35,7 +35,7 @@ pipelines:
                 resources:
                   -
                 tasks:
-                  - type: pluggable_task
+                  - type: fetch
                     attributes:
                       run_if:
                         - passed
