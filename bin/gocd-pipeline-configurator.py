@@ -66,6 +66,22 @@ def createPipeline(pipeline):
     if not response.status_code == 200:
        print "Error: Could not create pipeline " + pipeline['pipeline']['name'] + ": " + response.text
 
+def deletePipeline(pipeline):
+    create_url = options[BASE_URL_OPTION_NAME] + "/go/api/admin/pipelines/HIP_TEST2"
+    if 'pipeline_template' in pipeline:
+        if not pipeline['pipeline_template'] in templates:
+            print "Error: No such template '" + pipeline['pipeline_template']+ "'. Skipping " + pipeline['pipeline']['name']
+            return
+        template = templates[pipeline['pipeline_template']]
+        pipeline = merge(pipeline, template)
+
+    headers = {'Accept': 'application/vnd.go.cd.v3+json', 'Content-Type': 'application/json'}
+    print "create_url " + str(create_url)
+    response = requests.delete(create_url, headers=headers)
+    print "Error Code " + str(response.status_code)
+    if not response.status_code == 200:
+       print "Error: Could not create pipeline " + pipeline['pipeline']['name'] + ": " + response.text
+
 def createPipelines(filename):
     file_path = options[PIPELINE_DIR_OPTION_NAME] + "/" + filename
     yaml_data = yaml.load(open(file_path))
@@ -76,7 +92,7 @@ def createPipelines(filename):
     if 'pipelines' in yaml_data:
         pipelines = yaml_data['pipelines']
         for pipeline in pipelines:
-            createOrEditPipeline(pipeline)
+            deletePipeline(pipeline)
 
 def getDefaultConfig():
     working_dir_conf = os.getcwd() + "/.config.ini"
